@@ -8,7 +8,6 @@ function setup() {
 }
 
 @test "entrypoint runs successfully" {
-  run ls
   run puppet-lint --help
   echo "$output"
   [ "$status" -eq 0 ]
