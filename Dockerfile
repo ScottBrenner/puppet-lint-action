@@ -12,10 +12,7 @@ LABEL "com.github.actions.color"="orange"
 
 LABEL "maintainer"="Scott Brenner <scott@scottbrenner.me>"
 
-RUN apk update && apk upgrade
-RUN apk add ruby \
-  ruby-json
-RUN rm -rf /var/cache/apk/*
+RUN apk --no-cache add ruby ruby-json
 RUN gem install puppet-lint --no-document
 
 COPY entrypoint.sh /entrypoint.sh
