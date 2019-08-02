@@ -33,7 +33,7 @@ action "Publish Filter" {
 action "Docker Tag" {
   needs = ["Publish Filter"]
   uses = "actions/docker/tag@master"
-  args = "aws-cdk-action scottbrenner/puppet-lint-action --no-latest"
+  args = "puppet-lint-action scottbrenner/puppet-lint-action --no-latest"
 }
 
 action "Docker Login" {
