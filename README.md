@@ -19,12 +19,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-      
-    - name: Log into registry
-      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
 
     - name: puppet-lint
-      uses: docker://docker.pkg.github.com/scottbrenner/puppet-lint-action/puppet-lint-action:latest
+      uses: docker:///scottbrenner/puppet-lint-action:latest
       with:
         args: ./
 ```
