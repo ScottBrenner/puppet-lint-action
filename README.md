@@ -18,7 +18,7 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
 
     - name: puppet-lint
       uses: docker:///scottbrenner/puppet-lint-action:latest
