@@ -21,7 +21,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: puppet-lint
-      uses: docker:///scottbrenner/puppet-lint-action:latest
+      uses: scottbrenner/puppet-lint-action@master
       with:
         args: ./
 ```
