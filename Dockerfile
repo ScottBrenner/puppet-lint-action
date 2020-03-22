@@ -1,7 +1,6 @@
 FROM alpine:3
 
 LABEL name="puppet-lint-action"
-LABEL version="2.2.0"
 LABEL repository="https://github.com/ScottBrenner/puppet-lint-action"
 LABEL homepage="https://github.com/ScottBrenner/puppet-lint-action"
 
