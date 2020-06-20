@@ -8,7 +8,6 @@ on:
 
 jobs:
   # Run tests.
-  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
   build:
     runs-on: ubuntu-latest
 
