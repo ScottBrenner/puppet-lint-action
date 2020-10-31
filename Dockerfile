@@ -3,6 +3,7 @@ FROM ruby:alpine
 LABEL name="puppet-lint-action"
 LABEL repository="https://github.com/ScottBrenner/puppet-lint-action"
 LABEL homepage="https://github.com/ScottBrenner/puppet-lint-action"
+LABEL org.opencontainers.image.source="https://github.com/ScottBrenner/puppet-lint-action"
 
 LABEL "com.github.actions.name"="puppet-lint-action"
 LABEL "com.github.actions.description"="GitHub Action for puppet-lint"
