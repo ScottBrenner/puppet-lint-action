@@ -67,7 +67,7 @@ jobs:
         run: docker build . --file Dockerfile --tag "$IMAGE_NAME"
 
       - name: Log into GitHub Container Registry
-        run: ?
+        run: >
           echo "${{ secrets.GITHUB_TOKEN }}" |
           docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
 
