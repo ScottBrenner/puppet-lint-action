@@ -1,3 +1,4 @@
+---
 name: 'puppet-lint-action'
 author: 'Scott Brenner <scott@scottbrenner.me>'
 description: 'GitHub Action for puppet-lint'
