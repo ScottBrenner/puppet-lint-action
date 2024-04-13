@@ -1,6 +1,6 @@
 # GitHub Action for Puppet Lint
 
-This Action for [Puppet Lint](http://puppet-lint.com/) enables arbitrary actions for interacting with Puppet Lint to test Puppet code against the recommended [Puppet language style guide](puppet.com/docs/puppet/latest/style_guide.html). Puppet Lint validates only code style; it does not validate syntax.
+This Action for [Puppet Lint](https://github.com/puppetlabs/puppet-lint) enables arbitrary actions for interacting with Puppet Lint to test Puppet code against the recommended [Puppet language style guide](https://www.puppet.com/docs/puppet/8/style_guide.html). Puppet Lint validates only code style; it does not validate syntax.
 
 ## Usage
 
@@ -18,15 +18,15 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: puppet-lint
-      uses: scottbrenner/puppet-lint-action@master
+      uses: scottbrenner/puppet-lint-action@v1.0.4
       with:
         args: ./
 ```
 
-See [Testing with Puppet Lint](https://github.com/rodjek/puppet-lint#testing-with-puppet-lint) for full usage details.
+See [Testing with Puppet Lint](https://github.com/puppetlabs/puppet-lint?tab=readme-ov-file#testing-with-puppet-lint) for full usage details.
 
 ## License
 
