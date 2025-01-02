@@ -1,4 +1,4 @@
-FROM ruby:alpine
+FROM ruby:3.3-alpine
 
 LABEL name="puppet-lint-action"
 LABEL repository="https://github.com/ScottBrenner/puppet-lint-action"
