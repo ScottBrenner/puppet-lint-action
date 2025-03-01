@@ -12,10 +12,11 @@ LABEL "com.github.actions.color"="orange"
 
 LABEL "maintainer"="Scott Brenner <scott@scottbrenner.me>"
 
-RUN apk --no-cache add ruby-json
-RUN gem install puppet-lint --no-document
+RUN apk --no-cache add ruby-json \
+    && gem install puppet-lint --no-document
 
 COPY entrypoint.sh /entrypoint.sh
-RUN ["chmod", "+x", "/entrypoint.sh"]
+RUN chmod +x /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["./"]
