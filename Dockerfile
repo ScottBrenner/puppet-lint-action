@@ -12,7 +12,7 @@ LABEL "com.github.actions.color"="orange"
 
 LABEL "maintainer"="Scott Brenner <scott@scottbrenner.me>"
 
-RUN apk --no-cache add ruby-json \
+RUN apk --no-cache add ruby-libs \
     && gem install puppet-lint --no-document
 
 COPY puppet-lint.json /puppet-lint.json
