@@ -21,7 +21,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: puppet-lint
-      uses: scottbrenner/puppet-lint-action@v1.0.4
+      uses: scottbrenner/puppet-lint-action@v1.0.9
       with:
         args: ./
 ```
