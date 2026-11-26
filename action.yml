@@ -2,9 +2,17 @@
 name: 'puppet-lint-action'
 author: 'Scott Brenner <scott@scottbrenner.me>'
 description: 'GitHub Action for puppet-lint'
+inputs:
+  args:
+    description: 'Arguments to pass to puppet-lint'
+    required: false
+    default: './'
+  version:
+    description: 'The version of puppet-lint to install'
+    required: false
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'node24'
+  main: 'index.js'
 branding:
   icon: 'share-2'
   color: 'orange'
