@@ -13,23 +13,27 @@ on: [push]
 
 jobs:
   puppet-lint:
-
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: puppet-lint
-      uses: scottbrenner/puppet-lint-action@v1.0.9
-      with:
-        args: ./
+      - name: puppet-lint
+        uses: scottbrenner/puppet-lint-action@v2
+        with:
+          args: ./
 ```
+
+### Inputs
+
+| Input | Description | Default |
+| --- | --- | --- |
+| `args` | Arguments to pass to `puppet-lint` (set to `''` to only install `puppet-lint`) | `./` |
+| `version` | The version of `puppet-lint` gem to install | latest |
 
 See [Testing with Puppet Lint](https://github.com/puppetlabs/puppet-lint?tab=readme-ov-file#testing-with-puppet-lint) for full usage details.
 
 ## License
 
-The Dockerfile and associated scripts and documentation in this project are released under the [MIT License](LICENSE).
-
-Container images built with this project include third party materials. See [THIRD_PARTY_NOTICE.md](THIRD_PARTY_NOTICE.md) for details.
+The scripts and documentation in this project are released under the [MIT License](LICENSE).
